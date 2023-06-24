@@ -19,8 +19,8 @@
                                    <div class="temp-details">
                                        <h3>{{ data.hour }}:00</h3>
                                        <p class="my-1">Temp: {{ data.main.temp}}°c</p>
-                                       <p class="my-1">Tempa (Min): {{ data.main.temp_min}}°c</p>
-                                       <p class="my-1">Tempa (Max): {{ data.main.temp_max}}°c</p>
+                                       <p class="my-1">Temp: (Min): {{ data.main.temp_min}}°c</p>
+                                       <p class="my-1">Temp: (Max): {{ data.main.temp_max}}°c</p>
                                    </div>
                                     <div>
                                         <img :src="data.img"/>
