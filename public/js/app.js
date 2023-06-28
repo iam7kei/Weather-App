@@ -22490,7 +22490,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'CityButtons',
-  props: ["city", "current_city"],
+  props: ['city', 'current_city'],
   methods: {
     handleClick: function handleClick(selectedCity) {
       var cities = this.$parent.cities;
@@ -22556,8 +22556,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      city: "Tokyo",
-      cities: ["Tokyo", "Yokohama", "Kyoto", "Osaka", "Sapporo", "Nagoya"]
+      city: 'Tokyo',
+      cities: ['Tokyo', 'Yokohama', 'Kyoto', 'Osaka', 'Sapporo', 'Nagoya']
     };
   }
 });
@@ -22576,13 +22576,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "VenueItem",
-  props: ["renderedVenueData"],
+  name: 'VenueItem',
+  props: ['renderedVenueData'],
   data: function data() {
     return {};
-  },
-  mounted: function mounted() {},
-  methods: {}
+  }
 });
 
 /***/ }),
@@ -22603,19 +22601,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Venues",
+  name: 'Venues',
   components: {
     CityButtons: _Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     VenueItem: _VenueItem_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      city: "Tokyo",
-      cities: ["Tokyo", "Yokohama", "Kyoto", "Osaka", "Sapporo", "Nagoya"],
-      openWeatherMapApiUrl: "https://api.openweathermap.org/geo/1.0/direct?",
-      openWeatherMapApiAppId: "12693bcdf2f6aea4d586bf28fa32beb8",
-      fourSquareApiUrl: "https://api.foursquare.com/v3/places/search?",
-      fourSquareAppId: "fsq3Xj61+W5HvR7IT3/ZKjc5WvrNO7zxCHG7CjDnOKNWUok=",
+      city: 'Tokyo',
+      cities: ['Tokyo', 'Yokohama', 'Kyoto', 'Osaka', 'Sapporo', 'Nagoya'],
+      openWeatherMapApiUrl: 'https://api.openweathermap.org/geo/1.0/direct?',
+      openWeatherMapApiAppId: '12693bcdf2f6aea4d586bf28fa32beb8',
+      fourSquareApiUrl: 'https://api.foursquare.com/v3/places/search?',
+      fourSquareAppId: 'fsq3Xj61+W5HvR7IT3/ZKjc5WvrNO7zxCHG7CjDnOKNWUok=',
       currentDate: new Date(),
       venueData: [],
       renderedVenueData: []
@@ -22645,7 +22643,7 @@ __webpack_require__.r(__webpack_exports__);
         var API_KEY = _this.fourSquareAppId;
         fetch("".concat(_this.fourSquareApiUrl, "ll=").concat(LAT, "%2C").concat(LON, "&radius=100"), {
           headers: new Headers({
-            'Authorization': API_KEY
+            Authorization: API_KEY
           })
         }).then(function (res) {
           return res.json();
@@ -22663,17 +22661,17 @@ __webpack_require__.r(__webpack_exports__);
       this.renderedVenueData = [];
       venueData.forEach(function (row) {
         var address = row.location.formatted_address;
-        var address_split = address.split(" ");
-        var address_joined = address_split.join("+");
+        var address_split = address.split(' ');
+        var address_joined = address_split.join('+');
         var coordinates = "".concat(row.geocodes.main.latitude, ",").concat(row.geocodes.main.longitude);
         var formatted_url = "https://www.google.com/maps/place/".concat(address_joined, "/@").concat(coordinates);
         _this2.renderedVenueData.push([{
-          'id': row.fsq_id,
-          'name': row.name,
-          'category_name': row.categories[0].name,
-          'formatted_address': row.location.formatted_address,
-          'distance': row.distance,
-          'formatted_url': formatted_url
+          id: row.fsq_id,
+          name: row.name,
+          category_name: row.categories[0].name,
+          formatted_address: row.location.formatted_address,
+          distance: row.distance,
+          formatted_url: formatted_url
         }]);
       });
       console.log(this.renderedVenueData);
@@ -22697,17 +22695,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Buttons/Cities.vue */ "./resources/js/components/Buttons/Cities.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Weather",
+  name: 'Weather',
   components: {
     CityButtons: _Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
-      city: "Tokyo",
-      cities: ["Tokyo", "Yokohama", "Kyoto", "Osaka", "Sapporo", "Nagoya"],
-      coordinatesUrl: "https://api.openweathermap.org/geo/1.0/direct?",
-      forecastUrl: "https://api.openweathermap.org/data/2.5/forecast?",
-      appid: "12693bcdf2f6aea4d586bf28fa32beb8",
+      city: 'Tokyo',
+      cities: ['Tokyo', 'Yokohama', 'Kyoto', 'Osaka', 'Sapporo', 'Nagoya'],
+      coordinatesUrl: 'https://api.openweathermap.org/geo/1.0/direct?',
+      forecastUrl: 'https://api.openweathermap.org/data/2.5/forecast?',
+      appid: '12693bcdf2f6aea4d586bf28fa32beb8',
       currentDate: new Date(),
       weatherData: {},
       renderedWeatherData: {}
@@ -23018,7 +23016,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       key: city
     }, null, 8 /* PROPS */, ["city", "current_city"]);
   }), 128 /* KEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.city), 1 /* TEXT */)]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.renderedWeatherData, function (data) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.hour) + ":00", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, "Temp: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.main.temp) + "°c", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_10, "Temp: (Min): " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.main.temp_min) + "°c", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, "Temp: (Max): " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.main.temp_max) + "°c", 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.hour) + ":00", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, "Temp: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.main.temp) + "°c", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_10, " Temp: (Min): " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.main.temp_min) + "°c ", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, " Temp: (Max): " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.main.temp_max) + "°c ", 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       src: data.img
     }, null, 8 /* PROPS */, _hoisted_12)])])])]);
   }), 256 /* UNKEYED_FRAGMENT */))])])], 64 /* STABLE_FRAGMENT */);
@@ -23035,10 +23033,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _components_Dashboard_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Dashboard.vue */ "./resources/js/components/Dashboard.vue");
-/* harmony import */ var _components_Home_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue");
-/* harmony import */ var _components_Weather_Weather_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Weather/Weather.vue */ "./resources/js/components/Weather/Weather.vue");
-/* harmony import */ var _components_Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Buttons/Cities.vue */ "./resources/js/components/Buttons/Cities.vue");
+/* harmony import */ var _components_Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Buttons/Cities.vue */ "./resources/js/components/Buttons/Cities.vue");
+/* harmony import */ var _components_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Dashboard.vue */ "./resources/js/components/Dashboard.vue");
+/* harmony import */ var _components_Home_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue");
+/* harmony import */ var _components_Weather_Weather_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Weather/Weather.vue */ "./resources/js/components/Weather/Weather.vue");
 /* harmony import */ var _components_Venues_Venues_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Venues/Venues.vue */ "./resources/js/components/Venues/Venues.vue");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
@@ -23048,11 +23046,11 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({});
 
 
 
-app.component('dashboard-component', _components_Dashboard_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-app.component('weather-component', _components_Weather_Weather_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
-app.component('city-buttons', _components_Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_4__["default"]);
+app.component('city-buttons', _components_Buttons_Cities_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
+app.component('dashboard-component', _components_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
+app.component('home-component', _components_Home_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
+app.component('weather-component', _components_Weather_Weather_vue__WEBPACK_IMPORTED_MODULE_4__["default"]);
 app.component('venues-component', _components_Venues_Venues_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
-app.component('home-component', _components_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
 app.mount('#app');
 
 /***/ }),
