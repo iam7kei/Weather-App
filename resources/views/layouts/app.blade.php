@@ -24,7 +24,7 @@
 <body>
     <div id="app" class="theme-day" @v-cloak>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('Weather App', 'Weather App') }}
                 </a>
@@ -50,9 +50,13 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
-            @yield('content')
-        </main>
+
+        <div class="container-fluid">
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </div>
+
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>

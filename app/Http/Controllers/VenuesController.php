@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class VenuesController extends Controller
 {
     /**
@@ -24,4 +22,5 @@ class VenuesController extends Controller
     {
         return view('venues');
     }
+
 }

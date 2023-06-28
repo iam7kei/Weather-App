@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,4 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/weather', [App\Http\Controllers\WeatherController::class, 'index'])->name('weather');
 Route::get('/venues', [App\Http\Controllers\VenuesController::class, 'index'])->name('venues');
+

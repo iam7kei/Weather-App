@@ -1,11 +1,7 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
                 <div class="d-flex justify-content-around btn-group flex-wrap mb-3" role="group">
-                    <weather-buttons v-for="city in this.cities" :city="city" :key="city"/>
+                    <city-buttons v-for="city in this.cities" :city="city" :current_city="this.city" :key="city"/>
                 </div>
-
                 <div class="card">
                     <div class="card-body" v-cloak="renderedWeatherData">
                         <div class="card-title mb-4">
@@ -13,8 +9,6 @@
                         </div>
                         <div v-for="data in renderedWeatherData" class="card mb-4">
                             <div class="card-body">
-
-
                                 <div class="d-flex justify-content-between">
                                    <div class="temp-details">
                                        <h3>{{ data.hour }}:00</h3>
@@ -30,17 +24,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>
 
-    import WeatherButtons from './Buttons.vue';
+    import CityButtons from '../Buttons/Cities.vue';
     export default {
+        name: "Weather",
         components: {
-            WeatherButtons
+            CityButtons
         },
         data() {
             return {
